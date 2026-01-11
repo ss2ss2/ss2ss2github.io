@@ -4,6 +4,7 @@ body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #4E342E;
   background-color: #f4f4f4; /* 画像が読み込まれるまでの背景色 */
+}
 .hero-section {
   /* linear-gradientを使うと、写真を少し暗くして文字を読みやすくする */
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url('panda.png');
@@ -32,11 +33,13 @@ h2 {
   border-bottom: 2px solid #8D6E63; /* 下線 */
   display: inline-block; /* 線の長さを文字に合わせる */
   padding-bottom: 5px;
+}
 h3 {
   font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 15px;
   color: #6D4C41;
+}
 p {
     font-size: 1rem;
     line-height: 1.6;
@@ -51,6 +54,7 @@ ul {
 ul li {
     font-size: 1.1rem;
     margin-bottom: 5px;
+}
 table {
     width: 100%;            /* 親枠いっぱいに広げる */
     max-width: 500px;       /* ただし500px以上は大きくしない */
@@ -80,6 +84,6 @@ th {
   transition: background-color 0.3s;
 }
 .btn:hover {
-  background-color: whilte;
+  background-color: white;
   color: #333;
 }
