@@ -24,8 +24,12 @@ h1 {
   font-size: 3rem;
   margin: 0 0 10px 0;
   letter-spacing: 0.1em;
-  /* 文字の影を「白」にして、茶色の文字を浮き上がらせる */
-    text-shadow: 2px 2px 0px white;
+  font-weight: 900;
+text-shadow: 
+  3px 3px 0 white,  
+  -3px -3px 0 white,
+  -3px 3px 0 white, 
+  3px -3px 0 white; 
 }
 h2 {
   font-size: 2rem;
@@ -38,13 +42,17 @@ h3 {
   font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #6D4C41;
+  color: #A1887F;
+  text-shadow: 1px 1px 0 black;
 }
 p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    font-weight: 500; /* 文字を少し太くして読みやすく */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #222222;
+  /* 黒っぽい文字になるので、白縁は少し弱める */
+  text-shadow: 1px 1px 0 rgba(255,255,255, 0.8);
 }
 ul {
   list-style: none; 
@@ -52,36 +60,47 @@ ul {
   margin: 0;
 }
 ul li {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(255,255,255, 0.8);
 }
 table {
-    width: 100%;            /* 親枠いっぱいに広げる */
-    max-width: 500px;       /* ただし500px以上は大きくしない */
-    margin: 10px auto;      /* 中央配置 */
-    border-collapse: collapse; /* 枠線を重ねる */
-    /* 表の背景を白っぽくして読みやすく */
-    background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;            /* 親枠いっぱいに広げる */
+  max-width: 500px;       /* ただし500px以上は大きくしない */
+  margin: 10px auto;      /* 中央配置 */
+  border-collapse: collapse; /* 枠線を重ねる */
 }
-th, td {
-    border: 1px solid #8D6E63;
-    padding: 10px;          /* マス目の内側の余白 */
-    text-align: left;       /* 左揃え */
+td {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #8D6E63;
+  padding: 10px;         
+  text-align: left;
+  
 }
 th {
-    background-color: rgba(141, 110, 99, 0.2);
-    width: 40%; /* 見出しの幅 */
-    font-weight: bold;
+  background-color: #8D6E63;
+  color: white;
+  width: 40%; /* 見出しの幅 */
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 10px;
 }
 .btn {
-  margin-top: 20px;
-  padding: 10px 30px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 50px; 
+  background-color: #4E342E;
   color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: background-color 0.3s;
+　text-decoration: none; 
+  border-radius: 50px; 
+  font-weight: bold;
+  font-size: 1.2rem;   
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.3s; 
 }
 .btn:hover {
   background-color: white;
