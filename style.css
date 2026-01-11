@@ -6,7 +6,7 @@ body {
   background-color: #f4f4f4; /* 画像が読み込まれるまでの背景色 */
 .hero-section {
   /* linear-gradientを使うと、写真を少し暗くして文字を読みやすくする */
-  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url('panda.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url('panda.png');
   background-size: cover;
   background-position: center;
   /* 画面の高さ「以上」に広げる設定（内容が増えても途切れないようにする） */
