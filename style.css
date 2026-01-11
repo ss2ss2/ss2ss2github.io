@@ -10,9 +10,9 @@
   text-align: center;
 }
 /* 写真が明るくても文字が読めるように文字に影をつける */
-        /* .hero-section h1, .hero-section p {
-            text-shadow: 0 2px 5px rgba(0,0,0,0.7);
-        } */
+.hero-section h1, .hero-section p {
+  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+} 
 h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
