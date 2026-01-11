@@ -2,12 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  color: white;
-  background-color: #333; /* 画像が読み込まれるまでの背景色 */
+  color: #4E342E;
+  background-color: #f4f4f4; /* 画像が読み込まれるまでの背景色 */
 .hero-section {
-  /* linear-gradientを使うと、写真を少し暗くして文字を読みやすくできます */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg.png');
-  background-image: url('panda.png');
+  /* linear-gradientを使うと、写真を少し暗くして文字を読みやすくする */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('panda.png');
   background-size: cover;
   background-position: center;
   /* 画面の高さ「以上」に広げる設定（内容が増えても途切れないようにする） */
@@ -17,25 +16,33 @@ body {
  /* justify-content: center; */ /* 上下の中心（内容が少ない時） */
   align-items: center;     /* 左右の中心 */
   text-align: center;
+  padding: 40px 20px;
   box-sizing: border-box;  /* 余白を含めたサイズ計算にする */
 } 
 h1 {
   font-size: 3rem;
   margin: 0 0 10px 0;
   letter-spacing: 0.1em;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  /* 文字の影を「白」にして、茶色の文字を浮き上がらせる */
+    text-shadow: 2px 2px 0px white;
 }
 h2 {
   font-size: 2rem;
   margin-top: 40px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* 下線 */
+  border-bottom: 2px solid #8D6E63; /* 下線 */
   display: inline-block; /* 線の長さを文字に合わせる */
   padding-bottom: 5px;
 h3 {
   font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #ddd; /* 少しだけグレーにして階層を作る */
+  color: #6D4C41;
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: 500; /* 文字を少し太くして読みやすく */
+}
 ul {
   list-style: none; 
   padding: 0;
@@ -49,21 +56,18 @@ table {
     max-width: 500px;       /* ただし500px以上は大きくしない */
     margin: 10px auto;      /* 中央配置 */
     border-collapse: collapse; /* 枠線を重ねる */
-    background-color: rgba(0, 0, 0, 0.3); /* 表の背景を半透明の黒に */
+    /* 表の背景を白っぽくして読みやすく */
+    background-color: rgba(255, 255, 255, 0.6);
 }
 th, td {
-    border: 1px solid rgba(255, 255, 255, 0.3); /* 薄い白い枠線 */
+    border: 1px solid #8D6E63;
     padding: 10px;          /* マス目の内側の余白 */
     text-align: left;       /* 左揃え */
 }
 th {
-    background-color: rgba(255, 255, 255, 0.2); /* 見出しだけ少し明るく */
+    background-color: rgba(141, 110, 99, 0.2);
     width: 40%; /* 見出しの幅 */
     font-weight: bold;
-}
-p {
-  font-size: 1.2rem;
-  opacity: 0.9;
 }
 .btn {
   margin-top: 20px;
