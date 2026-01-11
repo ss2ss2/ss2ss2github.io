@@ -6,33 +6,34 @@ body {
   background-color: #f4f4f4;
 }
 
+/* --- 背景とレイアウト --- */
 .hero-section {
-  /* 背景設定 */
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url('panda.png');
+  /* 背景画像の設定 */
+  background-image: url('panda.png');
   background-size: cover;
-  background-position: center;
+  background-position: center top; 
+  
+  /* 画面の高さ設定 */
   min-height: 100vh;
   
   /* レイアウト設定 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 40px 20px;
+  justify-content: flex-end; /* 中身を「下」に寄せる */
+  padding-top: 60vh; /* 画面の上60%は無理やり空けて、写真専用スペースにする */
+  padding-bottom: 50px; /* 下の余白 */
   box-sizing: border-box;
-} 
+}
 
-/* 白い箱の設定 */
 .container {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  /* 箱は不透明に戻して、文字を読みやすくする */
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   padding: 40px;
   width: 90%;
   max-width: 600px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  margin-top: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 -10px 25px rgba(0,0,0,0.1); /* 影を少し上向きに */
 } 
 
 /*（箱の中の文字色をグレーに統一） */
