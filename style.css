@@ -1,22 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: white;
+  background-color: #333; /* 画像が読み込まれるまでの背景色 */
 .hero-section {
+  /* linear-gradientを使うと、写真を少し暗くして文字を読みやすくできます */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg.png');
   background-image: url('panda.png');
-  height: 100vh;
   background-size: cover;
   background-position: center;
+  /* 画面の高さ「以上」に広げる設定（内容が増えても途切れないようにする） */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: white;
+ /* justify-content: center; */ /* 上下の中心（内容が少ない時） */
+  align-items: center;     /* 左右の中心 */
   text-align: center;
-}
-/* 写真が明るくても文字が読めるように文字に影をつける */
-.hero-section h1, .hero-section p {
-  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  box-sizing: border-box;  /* 余白を含めたサイズ計算にする */
 } 
 h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0 10px 0;
   letter-spacing: 0.1em;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* 下線 */
+  display: inline-block; /* 線の長さを文字に合わせる */
+  padding-bottom: 5px;
+h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ddd; /* 少しだけグレーにして階層を作る */
+ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+table {
+    width: 100%;            /* 親枠いっぱいに広げる */
+    max-width: 500px;       /* ただし500px以上は大きくしない */
+    margin: 10px auto;      /* 中央配置 */
+    border-collapse: collapse; /* 枠線を重ねる */
+    background-color: rgba(0, 0, 0, 0.3); /* 表の背景を半透明の黒に */
+}
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 薄い白い枠線 */
+    padding: 10px;          /* マス目の内側の余白 */
+    text-align: left;       /* 左揃え */
+}
+th {
+    background-color: rgba(255, 255, 255, 0.2); /* 見出しだけ少し明るく */
+    width: 40%; /* 見出しの幅 */
+    font-weight: bold;
 }
 p {
   font-size: 1.2rem;
