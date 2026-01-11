@@ -51,7 +51,7 @@ body {
   max-width: 600px;
   box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
   /* 下に余白を持たせる */
-  margin-top: 200px;
+  margin-top: 150px;
   flex-grow: 1; /* 下まで伸ばす */
 } 
 
