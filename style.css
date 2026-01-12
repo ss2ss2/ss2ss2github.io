@@ -155,7 +155,7 @@ th {
 #rotate-btn {
   position: fixed;     /* 画面上の決まった位置に固定 */
   top: 100px;           
-  right: 500px;        
+  right: 300px;        
   z-index: 100;        /* 常に一番手前に表示 */
   
   background-color: rgba(255, 255, 255, 0.9); 
