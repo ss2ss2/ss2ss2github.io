@@ -6,30 +6,12 @@ body {
   background-color: #f4f4f4;
 }
 
-/* 背景設定（パンダの画像） */
-#background-layer {
-  position: fixed;       /* 画面に固定 */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;           /* 文字より後ろに配置 */
-  
+.hero-section {
   background-image: url('panda.png');
   background-size: cover;
-  background-position: center top; 
-  
-  /* 回転のアニメーション設定 */
-  transition: transform 1.0s ease-in-out;
-}
-
-/* 回転時のクラス */
-.is-rotated {
-  transform: rotate(360deg);
-}
-
-.hero-section {  
+  background-position: center top;
   min-height: 100vh;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,11 +25,7 @@ body {
   margin-top: 20vh; 
   margin-bottom: 10px;
   color: white !important; 
-  text-shadow: 
-    3px 3px 0 #4E342E,
-    -3px -3px 0 #4E342E,
-    -3px 3px 0 #4E342E,
-    3px -3px 0 #4E342E;
+  text-shadow: 2px 2px 0 #4E342E;
 }
 
 .sub-title {
@@ -55,18 +33,17 @@ body {
   margin-bottom: 40px; 
   color: white !important;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-/* --- About以降 --- */
 .container {
-  background-color: rgba(255, 255, 255, 0.9); 
+  background-color: rgba(255, 255, 255, 0.95); 
   border-radius: 20px 20px 0 0; 
   padding: 40px;
   width: 100%;  
   max-width: 600px;
-  box-shadow: 0 -10px 25px rgba(0,0,0,0.2);
-  margin-top: 150px;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+  margin-top: 50px; /* 余白調整 */
   flex-grow: 1; 
 } 
 
@@ -103,7 +80,6 @@ ul li {
   margin-bottom: 5px;
 }
 
-/* テーブル設定 */
 table {
   width: 100%;
   margin: 10px auto;
@@ -123,14 +99,12 @@ td {
 th {
   background-color: #8D6E63;
   color: white !important;
-  text-shadow: none;
   border: 1px solid #8D6E63;
   padding: 10px;
   font-weight: bold;
   width: 30%;
 }
 
-/* View Works ボタン設定 */
 .btn {
   display: inline-block;
   margin-top: 40px;
@@ -141,34 +115,9 @@ th {
   border-radius: 50px; 
   font-weight: bold;
   font-size: 1.2rem;   
-  border: 3px solid white;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-  transition: all 0.3s; 
+  transition: opacity 0.3s; 
 }
 
 .btn:hover {
-  background-color: white;
-  color: #333;
-}
-
-/* 回転ボタンを右上に固定 */
-#rotate-btn {
-  position: fixed;     /* 画面上の決まった位置に固定 */
-  top: 100px;           
-  right: 200px;        
-  z-index: 100;        /* 常に一番手前に表示 */
-  
-  background-color: rgba(255, 255, 255, 0.9); 
-  color: #4E342E;
-  border: 2px solid #4E342E;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-#rotate-btn:hover {
-  background-color: #4E342E;
-  color: white;
+  opacity: 0.8; 
 }
