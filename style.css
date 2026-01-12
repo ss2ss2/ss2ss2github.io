@@ -3,11 +3,10 @@ body {
   padding: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #333;
-  /* 背景色はbackground-layerがあるので削除しても大丈夫、念のため残す */
   background-color: #f4f4f4;
 }
 
-/* 背景設定 */
+/* 背景設定（パンダの画像） */
 #background-layer {
   position: fixed;       /* 画面に固定 */
   top: 0;
@@ -16,10 +15,9 @@ body {
   height: 100vh;
   z-index: -1;           /* 文字より後ろに配置 */
   
-  /* hero-sectionにあった画像設定 */
   background-image: url('panda.png');
   background-size: cover;
-  background-position: center top; /* パンダの顔が見える位置 */
+  background-position: center top; 
   
   /* 回転のアニメーション設定 */
   transition: transform 1.0s ease-in-out;
@@ -132,7 +130,7 @@ th {
   width: 30%;
 }
 
-/* ボタン設定 */
+/* View Works ボタン設定 */
 .btn {
   display: inline-block;
   margin-top: 40px;
@@ -153,17 +151,21 @@ th {
   color: #333;
 }
 
-/* 回転ボタン用のスタイル */
+/* 回転ボタンを右上に固定 */
 #rotate-btn {
-  background-color: white;
+  position: fixed;     /* 画面上の決まった位置に固定 */
+  top: 20px;           
+  right: 20px;        
+  z-index: 100;        /* 常に一番手前に表示 */
+  
+  background-color: rgba(255, 255, 255, 0.9); 
   color: #4E342E;
   border: 2px solid #4E342E;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 #rotate-btn:hover {
