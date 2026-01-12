@@ -7,6 +7,8 @@
   <title>ss2ss2のポートフォリオ</title>
 </head>
 <body>
+  <div id="background-layer"></div>
+
   <div class="hero-section">
     <h1 class="main-title">ss2ss2</h1>
     <p class="sub-title">レッサーパンダが好きです</p>
@@ -45,7 +47,19 @@
         </table>
 
         <a href="#" class="btn">View Works</a>
+
+        <button id="rotate-btn" style="margin-top: 20px; padding: 10px;">押してみて！</button>
+
     </div>
   </div>
+
+  <script>
+    const rotateButton = document.getElementById('rotate-btn');
+    const backgroundLayer = document.getElementById('background-layer');
+
+    rotateButton.addEventListener('click', () => {
+      backgroundLayer.classList.toggle('is-rotated');
+    });
+  </script>
 </body>
 </html>
